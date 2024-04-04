@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #scrollArea {
+                height: 2000px;
+            }
+            .custom-button{
+                max-width: 3000;
+                width: 100%;
+                height: 50px;
+            }
+            #not-fixed{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "scrollArea">
+            <input type = 'button' val id = "btnclk" value = "버튼" class="custom-button">
+        <script>
+            function buttonClick(event){
+                alert("x좌표는 " + event.clientX + "랍니다~")
+            }
+            btnclk.addEventListener('click', buttonClick);
+        </script>
+        <p id = "not-fixed">
+            스크롤 : 0
+        </p>
+        <script>
+            window.addEventListener('scroll', function(){
+                document.getElementById('not-fixed').innerText = "스크롤 : " + scrollY;
+            })
+        </script>
+        <button type="button" onClick, function(){
+
+        }>
+
+        </button>
+        </div>
+    </body>
+</html>
