@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #000C19;
+            }
+            #nav_ul{
+                display: inline-flex;
+                list-style-type: none;
+            }
+            section{
+                padding: 0em 3.5em;
+            }
+            .nav_item{
+                background-color: #125B9F;
+                padding: 0.5em 1em;
+                border-radius: 0.5em;
+                display: block;
+                margin: 0em 0.5em;
+            }
+            .nav_item:hover{
+                background-color: #125B9F
+            }
+            .nav_item:focus{
+                background-color: #125B9F
+            }
+            .nav_item:active{
+                background-color: #aeb6fc
+            }
+            .nav_text{
+                text-decoration-line: none;
+                color : white;
+            }
+            #weather_img{
+                filter: invert(100%);
+            }
+            #context{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <nav>
+            <div>
+                <ul id="nav_ul">
+                    <li class="nav_item">
+                        <a href="../index.html" class="nav_text">과제 창</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_text">랄라</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_text">랄라</a>
+                    </li>
+                    <li class="nav_item" id="boom_animate" id="rainbowChange" onmouseenter="rainbowChange()" onmouseleave="stopRainbow()">
+                        <a href="" class="nav_text">무지개는 찰나의 순간에만 볼 수 있죠</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <article>
+                <img id="weather_img" src="../images/weather/zeus.png" alt="weather_undefined" width="100" height="100" draggable="false" onclick="getWeather()">
+            </article>
+            <article>
+                <p id="context">내용</p>
+            </article>
+        </section>
+        <script type="text/javascript" src="home_animate.js"></script>
+    </body>
+</html>
