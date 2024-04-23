@@ -35,7 +35,7 @@
             #weather_img{
                 filter: invert(100%);
             }
-            #context{
+            #target_text{
                 color: white;
             }
         </style>
@@ -67,7 +67,13 @@
                 <img id="weather_img" src="../images/weather/zeus.png" alt="weather_undefined" width="100" height="100" draggable="false" onclick="getWeather()">
             </article>
             <article>
-                <p id="context">내용</p>
+                <div>
+                    <p style="display: inline-block; color: white"> button => </p>
+                    <input type="button" onclick="waitingFor()">
+                </div>
+                <div>
+                    <p id="target_text"> (blank) </p>
+                </div>
             </article>
         </section>
         <script type="text/javascript" src="home_animate.js"></script>

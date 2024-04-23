@@ -1,10 +1,13 @@
 const element = document.getElementById("boom_animate");
 const weatherIcon = document.getElementById("weather_img");
+const targetText = document.getElementById("target_text");
+
 let width = 10;
 let boom_intervalId;
 let rainbowChange_intervalId;
 let percents = 0;
 let rainbowDuration;
+let orderOfWaiting;
 
 function getRainbow(percents){
     let r, g, b;
@@ -58,3 +61,27 @@ function getWeather(){
     console.log(res);
     weatherIcon.src = res;
 }
+
+
+let firstPromise = ()=>{return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        targetText.textContent = "But I'm still...";
+        resolve();
+    }, 3000);
+});}
+
+let secondPromise = ()=>{return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        targetText.textContent = "Waiting For Love";
+        resolve();
+    }, 4000);
+})}
+
+function waitingFor(){
+    orderOfWaiting = 0;
+    firstPromise()
+    .then((r)=>{secondPromise()});
+    targetText.textContent = "Expectation always leads to disappointment...";
+}
+
+
