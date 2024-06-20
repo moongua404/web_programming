@@ -1,0 +1,2 @@
+DB_URL="mongodb+srv://dbUser:mAUMTH3lLQMZZXqW@webprogrammingdatabase.psny997.mongodb.net/?retryWrites=true&w=majority&appName=WebprogrammingDatabase"
+PORT = 8080

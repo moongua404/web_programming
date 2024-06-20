@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body{
+                padding: 0;
+                margin: 0;
+            }
+            header{
+                background-color: #b9c8ff;
+                width: 100%;
+                padding: 1% 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+            header h1{
+                margin: 0;
+                color: #6969f6;
+                text-align: center;
+            }
+            nav > ul{
+                list-style-type: none;
+                display: flex;
+            }
+            nav li{
+                padding: 0 2rem 0 0;
+            }
+            .nav_container{
+                background-color: #b9c8ff;
+                border: 10px solid #b9c8ff;
+                padding: 0px 5px;
+                border-radius: 10px;
+            }
+            img[id="ad"]{
+                width: 1000px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> 연습삼아 하는 웹플밍 연습 </h1>
+        </header>
+        <nav>
+            <ul>
+                <li> <div class="nav_container"> 메일<del>공부해요</del> </div> </li>
+                <li> <div class="nav_container"> 카페<del>나 가던가 해야지</del> </div> </li>
+                <li> <div class="nav_container"> 웹툰<del>밀려있는데...</del> </div> </li>
+                <li> <div class="nav_container" onclick="sayhi()"> 유효한 항목 </div> </li>
+                <script>
+                    function sayhi(){
+                        console.log(324123);
+                        alert("바보야");
+                    }
+                </script>
+            </ul>
+        </nav>
+        <aside></aside>
+        <section>
+            <article>
+                <a href="https://www.naver.com/"> 링크 </a>
+            </article>
+            <article>
+                <img id="ad" src="https://ssl.pstatic.net/melona/libs/1494/1494198/1d107dc01227d045fa67_20240418182436453.jpg">
+            </article>
+            <article>
+                <input id="btn" type="button">
+                <script>
+                    btn.addEventListener('click', ()=>{console.log(event.currentTarget);})
+                </script>
+            </article>
+        </section>
+        <aside></aside>
+        <footer></footer>
+        <script src="./index.js"></script>
+    </body>
+</html>
